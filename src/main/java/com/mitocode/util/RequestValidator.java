@@ -1,15 +1,12 @@
 package com.mitocode.util;
 
 import java.util.Set;
-
-import javax.validation.ConstraintViolation;
-import javax.validation.Validator;
-
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
-
 import reactor.core.publisher.Mono;
 
 @Component

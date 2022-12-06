@@ -1,21 +1,17 @@
 package com.mitocode.handler;
 
 import static org.springframework.web.reactive.function.BodyInserters.fromValue;
-
 import java.net.URI;
 import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
-
 import com.mitocode.dto.HateoasModel;
 import com.mitocode.model.Plato;
 import com.mitocode.service.IPlatoService;
 import com.mitocode.util.RequestValidator;
-
 import reactor.core.publisher.Mono;
 
 @Component
