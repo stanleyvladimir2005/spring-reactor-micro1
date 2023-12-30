@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/meseroapp
+      uri: mongodb+srv://stanleyvladimir:bar2005XP@cluster0.q4ibd.mongodb.net/meseroapp
   
   main:
     web-application-type: reactive
@@ -16,3 +16,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
