@@ -1,6 +1,6 @@
 plugins {
-	id 'org.springframework.boot' version '3.3.3'
-	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.springframework.boot' version '3.4.1'
+	id 'io.spring.dependency-management' version '1.1.7'
 	id 'java'
 }
 
@@ -8,7 +8,9 @@ group = 'com.mitocode'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '22'
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
 }
 
 repositories {
@@ -17,7 +19,7 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', "2023.0.3")
+	set('springCloudVersion', "2024.0.0")
 }
 
 dependencies {
@@ -28,7 +30,7 @@ dependencies {
 	implementation 'com.cloudinary:cloudinary-http44:1.39.0'
 	implementation 'io.projectreactor.addons:reactor-extra'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-	implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.6.0'
+	implementation 'org.springdoc:springdoc-openapi-starter-webflux-ui:2.7.0'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -43,6 +45,6 @@ dependencyManagement {
 }
 
 
-test {
+tasks.named('test') {
 	useJUnitPlatform()
 }
